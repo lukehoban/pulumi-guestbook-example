@@ -16,7 +16,7 @@ const redisReplica = new k8sjs.ServiceDeployment("redis-slave", {
 });
 
 const frontend = new k8sjs.ServiceDeployment("frontend", {
-    replicas: 3,
+    replicas: 4,
     image: "gcr.io/google-samples/gb-frontend:v4",
     ports: [80],
     allocateIpAddress: true,
